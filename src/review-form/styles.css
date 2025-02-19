@@ -1,0 +1,224 @@
+:root {
+  /* Light mode variables */
+  --bg-primary: white;
+  --bg-secondary: #f8f8f8;
+  --text-primary: #333;
+  --text-secondary: #555;
+  --border-color: #ddd;
+  --star-inactive: #e0e0e0;
+  --star-active: #ffc107;
+  --button-bg: #4a90e2;
+  --button-hover: #3a7bc8;
+  --button-text: white;
+  --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  --focus-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+}
+
+/* Dark mode variables */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-primary: #1e1e1e;
+    --bg-secondary: #2d2d2d;
+    --text-primary: #f0f0f0;
+    --text-secondary: #c0c0c0;
+    --border-color: #444;
+    --star-inactive: #555;
+    --star-active: #ffc107;
+    --button-bg: #3a7bc8;
+    --button-hover: #4a90e2;
+    --button-text: white;
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    --focus-shadow: 0 0 0 2px rgba(74, 144, 226, 0.3);
+  }
+}
+
+.review-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 16px;
+  background-color: var(--bg-primary);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  font-family: Arial, sans-serif;
+  color: var(--text-primary);
+}
+
+.review-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-title {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+}
+
+.rating-container {
+  margin-bottom: 20px;
+}
+
+.rating-label {
+  margin-bottom: 8px;
+  color: var(--text-secondary);
+}
+
+.stars {
+  display: flex;
+}
+
+.star-btn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: var(--star-inactive);
+  cursor: pointer;
+  transition: color 0.2s;
+  padding: 0;
+  margin-right: 5px;
+  width: 40px;
+  height: 40px;
+}
+
+.star-btn:focus {
+  outline: none;
+}
+
+.star-btn.active {
+  color: var(--star-active);
+}
+
+.textarea-container {
+  margin-bottom: 20px;
+}
+
+.textarea-label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--text-secondary);
+}
+
+.review-textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  resize: vertical;
+  font-family: inherit;
+  box-sizing: border-box;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.review-textarea:focus {
+  outline: none;
+  border-color: var(--button-bg);
+  box-shadow: var(--focus-shadow);
+}
+
+.submit-btn,
+.reset-btn {
+  padding: 10px 16px;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+  align-self: flex-start;
+}
+
+.submit-btn:hover,
+.reset-btn:hover {
+  background-color: var(--button-hover);
+}
+
+/* Success screen styles */
+.success-container {
+  text-align: center;
+}
+
+.success-title {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+}
+
+.submitted-rating {
+  margin: 20px 0;
+}
+
+.stars-display {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.star {
+  font-size: 1.5rem;
+  color: var(--star-inactive);
+  margin: 0 2px;
+}
+
+.star.active {
+  color: var(--star-active);
+}
+
+.submitted-review {
+  margin: 20px 0;
+  padding: 15px;
+  background-color: var(--bg-secondary);
+  border-radius: 6px;
+  font-style: italic;
+  color: var(--text-secondary);
+}
+
+.reset-btn {
+  margin: 10px auto;
+  display: block;
+}
+
+/* Add a class for manual dark mode toggle if needed */
+.dark-mode {
+  --bg-primary: #1e1e1e;
+  --bg-secondary: #2d2d2d;
+  --text-primary: #f0f0f0;
+  --text-secondary: #c0c0c0;
+  --border-color: #444;
+  --star-inactive: #555;
+  --star-active: #ffc107;
+  --button-bg: #3a7bc8;
+  --button-hover: #4a90e2;
+  --button-text: white;
+  --shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  --focus-shadow: 0 0 0 2px rgba(74, 144, 226, 0.3);
+}
+
+/* .theme-toggle {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 15px;
+}
+
+.theme-toggle-btn {
+  background: none;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 5px 10px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  color: var(--text-secondary);
+  background-color: var(--bg-primary);
+  transition: all 0.2s ease;
+}
+
+.theme-toggle-btn:hover {
+  border-color: var(--button-bg);
+  color: var(--text-primary);
+} */
+
+.submit-container {
+  display: flex;
+  justify-content: flex-end;
+}

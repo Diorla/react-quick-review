@@ -1,13 +1,10 @@
 import React from "react";
-import { Button } from "./Button";
-const logo = new URL("./sample.png", import.meta.url).href;
+import ReviewForm from "./review-form";
 
 export function App() {
   return (
-    <div>
-      <h1>Hello typescript!</h1>
-      <Button>Click me</Button>
-      <img src={logo} alt="logo" height={100} />
+    <div style={{ width: 320 }}>
+      <ReviewForm apiKey="ab92cf39-2def-4a6b-a13b-7bb79f84d885" multiple />
     </div>
   );
 }
