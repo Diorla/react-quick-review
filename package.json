@@ -5,11 +5,11 @@
   "license": "ISC",
   "author": "Ade Adeola",
   "type": "commonjs",
-  "source": "src/index.html",
+  "source": "src/index.tsx",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel",
+    "start": "parcel src/index.html",
     "build": "parcel build"
   },
   "dependencies": {
